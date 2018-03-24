@@ -1,41 +1,42 @@
 {
-  "name": "dom-dfs",
-  "version": "0.0.1",
-  "description": "Allows you to do a depth-first-search through DOM elements.",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/jsdom": "^11.0.4",
-    "@types/mocha": "^5.0.0",
-    "chai": "^4.1.2",
-    "husky": "^0.14.3",
-    "jsdom": "^11.6.2",
-    "lint-staged": "^7.0.0",
-    "mocha": "^5.0.5",
-    "prettier": "^1.11.1",
-    "ts-node": "^5.0.1",
-    "tslint": "^5.9.1",
-    "tslint-config-prettier": "^1.10.0",
-    "typescript": "^2.7.2"
-  },
-  "scripts": {
-    "test": "mocha -r ts-node/register src/**/*.spec.ts",
-    "test:watch": "npm run test -- --watch --watch-extensions ts",
-    "precommit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": ["prettier -c ./prettierrc", "tslint --fix", "git add"]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@gitlab.com/Robin_f/dom-bfs.git"
-  },
-  "keywords": ["bfs", "depth-first-search", "dom", "search"],
-  "author": "Robin Franken",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://gitlab.com/Robin_f/dom-bfs/issues"
-  },
-  "homepage": "https://gitlab.com/Robin_f/dom-bfs#README"
+    "name": "dom-dfs",
+    "version": "0.0.1",
+    "description": "Allows you to do a depth-first-search through DOM elements.",
+    "main": "index.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/chai": "^4.1.2",
+        "@types/jsdom": "^11.0.4",
+        "@types/mocha": "^5.0.0",
+        "chai": "^4.1.2",
+        "husky": "^0.14.3",
+        "jsdom": "^11.6.2",
+        "lint-staged": "^7.0.0",
+        "mocha": "^5.0.5",
+        "prettier": "^1.11.1",
+        "ts-node": "^5.0.1",
+        "tslint": "^5.9.1",
+        "tslint-config-prettier": "^1.10.0",
+        "typescript": "^2.7.2"
+    },
+    "scripts": {
+        "test": "mocha -r ts-node/register src/**/*.spec.ts",
+        "test:watch": "npm run test -- --watch --watch-extensions ts",
+        "precommit": "lint-staged",
+        "build": "tsc"
+    },
+    "lint-staged": {
+        "*.ts": ["prettier -c ./prettierrc", "tslint --fix", "git add"]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@gitlab.com/Robin_f/dom-bfs.git"
+    },
+    "keywords": ["bfs", "depth-first-search", "dom", "search"],
+    "author": "Robin Franken",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://gitlab.com/Robin_f/dom-bfs/issues"
+    },
+    "homepage": "https://gitlab.com/Robin_f/dom-bfs#README"
 }
