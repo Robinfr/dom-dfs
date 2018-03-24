@@ -1,6 +1,6 @@
 {
     "name": "dom-dfs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Allows you to do a depth-first-search through DOM elements.",
     "main": "./lib/index.js",
     "dependencies": {},
@@ -27,13 +27,22 @@
         "build": "tsc"
     },
     "lint-staged": {
-        "*.ts": ["prettier -c ./prettierrc", "tslint --fix", "git add"]
+        "*.ts": [
+            "prettier -c ./prettierrc",
+            "tslint --fix",
+            "git add"
+        ]
     },
     "repository": {
         "type": "git",
         "url": "git+ssh://git@gitlab.com/Robin_f/dom-bfs.git"
     },
-    "keywords": ["bfs", "depth-first-search", "dom", "search"],
+    "keywords": [
+        "bfs",
+        "depth-first-search",
+        "dom",
+        "search"
+    ],
     "author": "Robin Franken",
     "license": "MIT",
     "bugs": {
