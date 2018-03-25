@@ -38,7 +38,7 @@
         "url": "git+ssh://git@github.com:Robinfr/dom-dfs.git"
     },
     "keywords": [
-        "bfs",
+        "dfs",
         "depth-first-search",
         "dom",
         "search"
