@@ -1,6 +1,6 @@
 {
     "name": "dom-dfs",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Allows you to do a depth-first-search through DOM elements.",
     "main": "./lib/index.js",
     "dependencies": {},
