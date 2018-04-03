@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 import { JSDOM } from 'jsdom';
-import bfsDOM from './index';
+import dfsDOM from './index';
 
-describe('BFS DOM', () => {
+describe('DFS DOM', () => {
     const dom = new JSDOM(`<div>
         <div class="first-child">
             <div id="a">
@@ -18,21 +18,21 @@ describe('BFS DOM', () => {
 
     it('should return the initial node', () => {
         const startingElement = dom.window.document.querySelector('div') as HTMLElement;
-        const returnedElement = bfsDOM(startingElement, element => element.className.length === 0);
+        const returnedElement = dfsDOM(startingElement, element => element.className.length === 0);
 
         expect(startingElement).to.equal(returnedElement);
     });
 
     it('should find a child with id c', () => {
         const startingElement = dom.window.document.querySelector('div') as HTMLElement;
-        const returnedElement = bfsDOM(startingElement, element => element.id === 'c');
+        const returnedElement = dfsDOM(startingElement, element => element.id === 'c');
 
         expect(returnedElement).to.equal(startingElement.querySelector('#c'));
     });
 
     it('should find the lowest-level child with the deep class', () => {
         const startingElement = dom.window.document.querySelector('div') as HTMLElement;
-        const returnedElement = bfsDOM(
+        const returnedElement = dfsDOM(
             startingElement,
             element => element.className === 'deep'
         ) as HTMLElement;
